@@ -9,10 +9,10 @@ const ctx = canvas.getContext('2d');
     var t = true;
     var c = 0;
     var img;
-
+    const current = document.getElementById('cc');
+    current.style.color = 'black';
 window.onload = () => {
     let painting;
-    
 
     function start(){
         painting = true;
@@ -27,7 +27,6 @@ window.onload = () => {
     }
 
     function key(e){
-        console.log(e);
         if(t){
         if(e.key == ' '){
             if(c<4){
@@ -35,15 +34,19 @@ window.onload = () => {
                 switch(c){
                     case 1:
                         ctx.fillStyle="#ff0000";
+                        current.style.color = '#ff0000';
                         break;
                     case 2:
                         ctx.fillStyle="#00ff00";
+                        current.style.color = '#00ff00';
                         break;
                     case 3:
                         ctx.fillStyle="#0000ff";
+                        current.style.color = '#0000ff';
                         break;
                     case 4:
                         ctx.fillStyle="#ffffff";
+                        current.style.color = '#ffffff';
                         break;
                 }
             }else{

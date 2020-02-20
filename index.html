@@ -2,26 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas Draw</title>
-</head>
-<body>
-    <canvas id="canvas"></canvas>
+    <title>JASH LIST</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-family: 'VT323', monospace;
         }
-        #canvas {
-            border: 2px solid black;
+
+        body {
+            background-image: linear-gradient(to right, red, purple);
+        }
+
+        #links {
+            position: absolute; top: 100px;left:500px;
+            color: white;
+            background-color: rgba(0,0,0,0.1);
+            padding: 5px;
+            font-size: 35px;
+            transition: background-color 2s;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #links:hover {
+            background-color: rgba(0,0,0,0.5);   
         }
     </style>
-    <script type="module" src="canvas.js"></script>
-    <p id="cords"></p>
-    Desenhe no Canvas com o botão direito do mouse.<br>
-    Espaço alterna entre as cores preto, vermelho, verde, azul e branco (borracha).<br>
-    Enter salva a imagem.<br>
-    A tecla C limpa o Canvas.<br><a id="link"></a>
+</head>
+<body>
+    <h1 style="text-shadow: 0px 2px rgba(0,0,0,0.4); position: absolute; top: 10px;"> JASH's LIST</h1>
+    <div id="links">
+        ><a href="./canvasdraw/index.html">/canvasdraw/index.html</a><br>
+        ><a href="./canvasgame/index.html">/canvasgame/index.html</a><br>
+        ><a href="./descontinuação/index.html">/descontinuação/index.html</a>
+
+    </div>
 </body>
 </html>
