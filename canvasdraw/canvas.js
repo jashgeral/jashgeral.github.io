@@ -25,11 +25,20 @@ window.onload = () => {
         if(!painting) return;
         ctx.fillRect(Math.floor(e.clientX/scale)*scale,Math.floor(e.clientY/scale)*scale,scale,scale);
     }
-
+    var cor;
     function key(e){
         if(t){
+        if(e.key == 'Tab'){
+        	cor = prompt("Escreva o código da cor:","#");
+        	current.style.color = cor;
+        	ctx.fillStyle = cor;
+        }
+        if(e.key == 'e'){
+        	ctx.fillStyle = "#ffffff";
+        	current.style.color = "#ffffff";
+        }
         if(e.key == ' '){
-            if(c<4){
+            if(c<3){
                 c++;
                 switch(c){
                     case 1:
@@ -43,10 +52,6 @@ window.onload = () => {
                     case 3:
                         ctx.fillStyle="#0000ff";
                         current.style.color = '#0000ff';
-                        break;
-                    case 4:
-                        ctx.fillStyle="#ffffff";
-                        current.style.color = '#ffffff';
                         break;
                 }
             }else{
