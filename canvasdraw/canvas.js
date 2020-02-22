@@ -29,29 +29,33 @@ window.onload = () => {
     function key(e){
         if(t){
         if(e.key == 'z'){
-        	cor = prompt("Escreva o código da cor:","#");
+        	cor = prompt("Escreva o código da cor:",cor);
         	current.style.color = cor;
         	ctx.fillStyle = cor;
         }
         if(e.key == 'e'){
-        	ctx.fillStyle = "#ffffff";
-        	current.style.color = "#ffffff";
+        	cor = "#ffffff";
+        	ctx.fillStyle = cor;
+        	current.style.color = cor;
         }
         if(e.key == ' '){
             if(c<3){
                 c++;
                 switch(c){
                     case 1:
-                        ctx.fillStyle="#ff0000";
-                        current.style.color = '#ff0000';
+                    	cor = "#ff0000";
+                        ctx.fillStyle= cor;
+                        current.style.color = cor;
                         break;
                     case 2:
-                        ctx.fillStyle="#00ff00";
-                        current.style.color = '#00ff00';
+                    	cor = "#00ff00";
+                        ctx.fillStyle= cor;
+                        current.style.color = cor;
                         break;
                     case 3:
-                        ctx.fillStyle="#0000ff";
-                        current.style.color = '#0000ff';
+                    	cor = "#0000ff";
+                        ctx.fillStyle= cor;
+                        current.style.color = cor;
                         break;
                 }
             }else{
