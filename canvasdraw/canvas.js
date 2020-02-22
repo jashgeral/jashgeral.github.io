@@ -28,7 +28,7 @@ window.onload = () => {
     var cor;
     function key(e){
         if(t){
-        if(e.key == 'Tab'){
+        if(e.key == 'z'){
         	cor = prompt("Escreva o código da cor:","#");
         	current.style.color = cor;
         	ctx.fillStyle = cor;
